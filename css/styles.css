@@ -1,0 +1,294 @@
+/* Modus Versus Slicing
+ *
+ * /sass/styles.scss - Main stylesheet
+ *
+ * started at 16/02/2016
+ */
+/* Modus Versus Slicing
+ *
+ * /sass/settings/_paths.scss - Global paths variables
+ *
+ * coded by leny@flatLand!
+ * started at 16/02/2016
+ */
+/* Modus Versus Slicing
+ *
+ * /sass/settings/_fonts.scss - Global fonts variables & fonts loading
+ *
+ * coded by leny@flatLand!
+ * started at 16/02/2016
+ */
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../assets/fonts/open-sans/opensans-regular-webfont.eot");
+  src: url("../assets/fonts/open-sans/opensans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/open-sans/opensans-regular-webfont.woff2") format("woff2"), url("../assets/fonts/open-sans/opensans-regular-webfont.woff") format("woff"), url("../assets/fonts/open-sans/opensans-regular-webfont.ttf") format("truetype"), url("../assets/fonts/open-sans/opensans-regular-webfont.svg#open_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../assets/fonts/open-sans/opensans-italic-webfont.eot");
+  src: url("../assets/fonts/open-sans/opensans-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/open-sans/opensans-italic-webfont.woff2") format("woff2"), url("../assets/fonts/open-sans/opensans-italic-webfont.woff") format("woff"), url("../assets/fonts/open-sans/opensans-italic-webfont.ttf") format("truetype"), url("../assets/fonts/open-sans/opensans-italic-webfont.svg#open_sansitalic") format("svg");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../assets/fonts/open-sans/opensans-semibold-webfont.eot");
+  src: url("../assets/fonts/open-sans/opensans-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/open-sans/opensans-semibold-webfont.woff2") format("woff2"), url("../assets/fonts/open-sans/opensans-semibold-webfont.woff") format("woff"), url("../assets/fonts/open-sans/opensans-semibold-webfont.ttf") format("truetype"), url("../assets/fonts/open-sans/opensans-semibold-webfont.svg#open_sanssemibold") format("svg");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../assets/fonts/open-sans/opensans-bold-webfont.eot");
+  src: url("../assets/fonts/open-sans/opensans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/open-sans/opensans-bold-webfont.woff2") format("woff2"), url("../assets/fonts/open-sans/opensans-bold-webfont.woff") format("woff"), url("../assets/fonts/open-sans/opensans-bold-webfont.ttf") format("truetype"), url("../assets/fonts/open-sans/opensans-bold-webfont.svg#open_sansbold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../assets/fonts/open-sans/opensans-bolditalic-webfont.eot");
+  src: url("../assets/fonts/open-sans/opensans-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/open-sans/opensans-bolditalic-webfont.woff2") format("woff2"), url("../assets/fonts/open-sans/opensans-bolditalic-webfont.woff") format("woff"), url("../assets/fonts/open-sans/opensans-bolditalic-webfont.ttf") format("truetype"), url("../assets/fonts/open-sans/opensans-bolditalic-webfont.svg#open_sansbold") format("svg");
+  font-weight: bold;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Glyphs';
+  src: url("../assets/fonts/fontawesome/fontawesome-webfont.eot");
+  src: url("../assets/fonts/fontawesome/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/fontawesome/fontawesome-webfont.woff2") format("woff2"), url("../assets/fonts/fontawesome/fontawesome-webfont.woff") format("woff"), url("../assets/fonts/fontawesome/fontawesome-webfont.ttf") format("truetype"), url("../assets/fonts/fontawesome/fontawesome-webfont.svg#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Epic';
+  src: url("../assets/fonts/MyEpicSelfie/myepicselfie-webfont.eot");
+  src: url("../assets/fonts/MyEpicSelfie/myepicselfie-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/MyEpicSelfie/myepicselfie-webfont.woff2") format("woff2"), url("../assets/fonts/MyEpicSelfie/myepicselfie-webfont.woff") format("woff"), url("../assets/fonts/MyEpicSelfie/myepicselfie-webfont.ttf") format("truetype"), url("../assets/fonts/MyEpicSelfie/myepicselfie-webfont.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* Modus Versus Slicing
+ *
+ * /sass/tools/_utils.scss - Small utilities
+ *
+ * coded by leny@flatLand!
+ * started at 16/02/2016
+ */
+.hidden {
+  display: none; }
+
+/* Modus Versus Slicing
+ *
+ * /sass/generic/_meyer-reset.scss - Eric Meyer's CSS reset - http://meyerweb.com/eric/tools/css/reset/
+ *
+ * coded by leny@flatLand!
+ * started at 16/02/2016
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Modus Versus Slicing
+ *
+ * /sass/generic/_box-sizing.scss - box-sizing reset
+ *
+ * coded by leny@flatLand!
+ * started at 16/02/2016
+ */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+/* Modus Versus Slicing
+ *
+ * /sass/base/_root.scss - Base styles for root element
+ *
+ * coded by leny@flatLand!
+ * started at 16/02/2016
+ */
+html {
+  font: normal 16px "OpenSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #3d3b42;
+  color: #ffffff; }
+
+a {
+  text-decoration: none;
+  color: #ffffff; }
+
+section {
+  margin-bottom: 2rem; }
+
+.header {
+  float: left;
+  height: 100vh;
+  margin: 0 3rem;
+  width: 15rem;
+  border-right-width: 3px;
+  border-right-style: solid;
+  -webkit-border-right-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(transparent)) 1 100%;
+  -webkit-border-right-image: -webkit-linear-gradient(#ffffff, transparent) 1 100%;
+  -moz-border-right-image: -moz-linear-gradient(top, #ffffff, transparent) 1 100%;
+  -o-border-right-image: -o-linear-gradient(#ffffff, transparent) 1 100%;
+  border-right-image: linear-gradient(to bottom, #ffffff, transparent) 1 100%; }
+
+.nav-menu__element {
+  width: 100%;
+  padding: 2rem 0; }
+
+.nav-menu__link {
+  width: 100%;
+  display: block;
+  padding: 1rem 3rem 1rem;
+  border-radius: 10px 0 0 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  font-weight: bold; }
+  .nav-menu__link--active {
+    background: linear-gradient(left, #7A7A7A, #ffffff);
+    background: -ms-linear-gradient(left, #7A7A7A, #ffffff);
+    background: -webkit-gradient(linear, left, from(#7A7A7A), to(#ffffff));
+    background: -moz-linear-gradient(left, #7A7A7A, #ffffff);
+    color: #444444; }
+  .nav-menu__link:hover {
+    background: linear-gradient(left, #7A7A7A, #ffffff);
+    background: -ms-linear-gradient(left, #7A7A7A, #ffffff);
+    background: -webkit-gradient(linear, left, from(#7A7A7A), to(#ffffff));
+    background: -moz-linear-gradient(left, #7A7A7A, #ffffff);
+    color: #444444; }
+
+.main-intro {
+  width: 80%;
+  padding-top: 25%;
+  padding-bottom: 4rem; }
+  .main-intro__title {
+    padding-bottom: 2rem;
+    font-size: 1.5rem; }
+
+.main-bio {
+  width: 80%; }
+  .main-bio__title {
+    padding-bottom: 2rem;
+    font-size: 1.5rem; }
+
+.footer {
+  position: fixed;
+  width: 100%;
+  height: 1.1rem;
+  padding-left: 21rem;
+  top: auto;
+  bottom: 0;
+  font-size: 0.75rem;
+  background-image: -moz-linear-gradient(top, transparent 0%, #000000 100%);
+  background-image: -o-linear-gradient(top, transparent 0%, #000000 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, transparent), color-stop(100, #000000));
+  background-image: -webkit-linear-gradient(top, transparent 0%, #000000 100%);
+  background-image: linear-gradient(to bottom, transparent 0%, #000000 100%); }
+
+.projects__title {
+  font-size: 5rem;
+  font-weight: bold;
+  letter-spacing: -0.4rem;
+  text-transform: uppercase; }
+
+.projects__container {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold; }
+
+.projects-elem {
+  flex: 1;
+  margin: 0.5rem; }
+  .projects-elem__link {
+    width: 100%;
+    height: 85vh;
+    text-indent: -9999px;
+    display: block; }
+    .projects-elem__link:hover {
+      opacity: 1;
+      z-index: 1;
+      transition: 1s;
+      transform: scale(1.02, 1.02); }
+
+.Game {
+  background-image: url("../assets/GamePreview.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 2rem;
+  opacity: 0.4;
+  box-shadow: 2px 2px 25px #000000;
+  z-index: 0; }
+
+.Baobab {
+  background-image: url("../assets/BaobabPreview.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 2rem;
+  opacity: 0.4;
+  box-shadow: 2px 2px 25px #000000;
+  z-index: 0; }
+
+.Biblio {
+  background-image: url("../assets/BiblioPreview.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 2rem;
+  opacity: 0.4;
+  box-shadow: 2px 2px 25px #000000;
+  z-index: 0; }
+
+.error {
+  font-size: 5rem;
+  text-align: center;
+  padding-top: 25%; }
+
+/*# sourceMappingURL=styles.css.map */

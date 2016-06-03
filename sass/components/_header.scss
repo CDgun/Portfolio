@@ -1,0 +1,52 @@
+.header{
+    float: left;
+    height: 100vh;
+    margin:0 3rem;
+    width:15rem;
+    //border
+    border-right-width: 3px;
+    border-right-style: solid;
+    -webkit-border-right-image: -webkit-gradient(linear, 0 0, 0 100%, from($borderRightGrad), to($borderRight)) 1 100%;
+    -webkit-border-right-image: -webkit-linear-gradient($borderRightGrad, $borderRight) 1 100%;
+    -moz-border-right-image: -moz-linear-gradient(top,$borderRightGrad, $borderRight) 1 100%;
+    -o-border-right-image: -o-linear-gradient($borderRightGrad, $borderRight) 1 100%;
+    border-right-image: linear-gradient(to bottom, $borderRightGrad, $borderRight) 1 100%;
+}
+
+.nav{
+    &-menu{
+
+        &__logo{
+
+        }
+        &__element{
+            width:100%;
+            padding: 2rem 0;
+
+        }
+        &__link{
+            width: 100%;
+            display: block;
+            padding: 1rem 3rem 1rem;
+            border-radius: 10px 0 0 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            font-weight: bold;
+
+            &--active{
+                background:linear-gradient(left,$hoverBackgroundColor, $hoverGradientColor);
+                background: -ms-linear-gradient(left,$hoverBackgroundColor, $hoverGradientColor);
+                background: -webkit-gradient(linear, left, from($hoverBackgroundColor), to($hoverGradientColor));
+                background: -moz-linear-gradient(left,$hoverBackgroundColor, $hoverGradientColor);
+                color:$hoverFontColor;
+            }
+            &:hover{
+                background:linear-gradient(left,$hoverBackgroundColor, $hoverGradientColor);
+                background: -ms-linear-gradient(left,$hoverBackgroundColor, $hoverGradientColor);
+                background: -webkit-gradient(linear, left, from($hoverBackgroundColor), to($hoverGradientColor));
+                background: -moz-linear-gradient(left,$hoverBackgroundColor, $hoverGradientColor);
+                color:$hoverFontColor;
+            }
+        }
+    }
+}

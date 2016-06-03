@@ -1,0 +1,25 @@
+.main{
+
+    &-intro{
+        width:80%;
+        padding-top: 25%;
+        padding-bottom: 4rem;
+        &__title{
+            padding-bottom: 2rem;
+            font-size: 1.5rem;
+        }
+        &__text{
+
+        }
+    }
+    &-bio{
+        width:80%;
+        &__title{
+            padding-bottom: 2rem;
+            font-size: 1.5rem;
+        }
+        &__text{
+
+        }
+    }
+}

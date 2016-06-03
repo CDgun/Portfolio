@@ -1,0 +1,65 @@
+.projects{
+    &__title{
+        font-size: 5rem;
+        font-weight: bold;
+        letter-spacing: -0.4rem;
+        text-transform: uppercase;
+    }
+    &__container{
+        display: flex;
+        flex-flow: row wrap;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    &-elem{
+        flex: 1;
+        margin: 0.5rem;
+        &__link{
+            width:100%;
+            height: 85vh;
+            text-indent:-9999px;
+            display:block;
+            &:hover{
+                opacity: 1;
+                z-index: 1;
+                transition: 1s;
+                transform: scale(1.02,1.02);
+
+            }
+
+        }
+    }
+
+}
+
+.Game{
+    background-image: url("../assets/GamePreview.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 2rem;
+    opacity: 0.4;
+    box-shadow:2px 2px 25px #000000;
+    z-index: 0;
+}
+.Baobab{
+    background-image: url("../assets/BaobabPreview.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 2rem;
+    opacity: 0.4;
+    box-shadow:2px 2px 25px #000000;
+    z-index: 0;
+}
+.Biblio{
+    background-image: url("../assets/BiblioPreview.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 2rem;
+    opacity: 0.4;
+    box-shadow:2px 2px 25px #000000;
+    z-index: 0;
+}
