@@ -1,8 +1,20 @@
 .header{
     float: left;
     height: 100vh;
-    margin:0 3rem;
+    margin:0 3rem 0 0;
+    padding-left: 3rem;
     width:15rem;
+    -webkit-box-shadow: 7px 0px 8px -1px rgba(0,0,0,0.46);
+    -moz-box-shadow: 7px 0px 8px -1px rgba(0,0,0,0.46);
+    box-shadow: 7px 0px 8px -1px rgba(0,0,0,0.46);
+    background: rgba(19,19,19,1);
+    background: -moz-linear-gradient(left, rgba(19,19,19,1) 0%, rgba(28,28,28,1) 31%, rgba(43,43,43,1) 57%, rgba(17,17,17,1) 82%, rgba(0,0,0,1) 93%, rgba(0,0,0,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(19,19,19,1)), color-stop(31%, rgba(28,28,28,1)), color-stop(57%, rgba(43,43,43,1)), color-stop(82%, rgba(17,17,17,1)), color-stop(93%, rgba(0,0,0,1)), color-stop(100%, rgba(0,0,0,1)));
+    background: -webkit-linear-gradient(left, rgba(19,19,19,1) 0%, rgba(28,28,28,1) 31%, rgba(43,43,43,1) 57%, rgba(17,17,17,1) 82%, rgba(0,0,0,1) 93%, rgba(0,0,0,1) 100%);
+    background: -o-linear-gradient(left, rgba(19,19,19,1) 0%, rgba(28,28,28,1) 31%, rgba(43,43,43,1) 57%, rgba(17,17,17,1) 82%, rgba(0,0,0,1) 93%, rgba(0,0,0,1) 100%);
+    background: -ms-linear-gradient(left, rgba(19,19,19,1) 0%, rgba(28,28,28,1) 31%, rgba(43,43,43,1) 57%, rgba(17,17,17,1) 82%, rgba(0,0,0,1) 93%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(to right, rgba(19,19,19,1) 0%, rgba(28,28,28,1) 31%, rgba(43,43,43,1) 57%, rgba(17,17,17,1) 82%, rgba(0,0,0,1) 93%, rgba(0,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#131313', endColorstr='#000000', GradientType=1 );
     //border
     border-right-width: 3px;
     border-right-style: solid;
@@ -11,13 +23,15 @@
     -moz-border-right-image: -moz-linear-gradient(top,$borderRightGrad, $borderRight) 1 100%;
     -o-border-right-image: -o-linear-gradient($borderRightGrad, $borderRight) 1 100%;
     border-right-image: linear-gradient(to bottom, $borderRightGrad, $borderRight) 1 100%;
+    position: fixed;
 }
 
 .nav{
     &-menu{
 
-        &__logo{
-
+        &-logo__img{
+            width:150px;
+            height: auto;
         }
         &__element{
             width:100%;
@@ -29,22 +43,26 @@
             display: block;
             padding: 1rem 3rem 1rem;
             border-radius: 10px 0 0 10px;
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px 0 0 10px;
+            -moz-border-radius: 10px 0 0 10px;
             font-weight: bold;
 
             &--active{
-                background:linear-gradient(left,$hoverBackgroundColor, $hoverGradientColor);
+                background: -webkit-gradient(left top, right top,$hoverBackgroundColor, $hoverGradientColor);
+                background: -webkit-linear-gradient(left,$hoverBackgroundColor, $hoverGradientColor);
+                background: -o-linear-gradient(left,$hoverBackgroundColor, $hoverGradientColor);
                 background: -ms-linear-gradient(left,$hoverBackgroundColor, $hoverGradientColor);
-                background: -webkit-gradient(linear, left, from($hoverBackgroundColor), to($hoverGradientColor));
-                background: -moz-linear-gradient(left,$hoverBackgroundColor, $hoverGradientColor);
+                background: linear-gradient(to right,$hoverBackgroundColor, $hoverGradientColor);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$hoverBackgroundColor', endColorstr='$hoverGradientColor', GradientType=1 );
                 color:$hoverFontColor;
             }
-            &:hover{
-                background:linear-gradient(left,$hoverBackgroundColor, $hoverGradientColor);
+            &:hover,&:focus{
+                background: -webkit-gradient(left top, right top,$hoverBackgroundColor, $hoverGradientColor);
+                background: -webkit-linear-gradient(left,$hoverBackgroundColor, $hoverGradientColor);
+                background: -o-linear-gradient(left,$hoverBackgroundColor, $hoverGradientColor);
                 background: -ms-linear-gradient(left,$hoverBackgroundColor, $hoverGradientColor);
-                background: -webkit-gradient(linear, left, from($hoverBackgroundColor), to($hoverGradientColor));
-                background: -moz-linear-gradient(left,$hoverBackgroundColor, $hoverGradientColor);
+                background: linear-gradient(to right,$hoverBackgroundColor, $hoverGradientColor);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$hoverBackgroundColor', endColorstr='$hoverGradientColor', GradientType=1 );
                 color:$hoverFontColor;
             }
         }

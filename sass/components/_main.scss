@@ -1,9 +1,30 @@
 .main{
-
+    margin-left: 15rem;
+    height: 100vh;
+    padding-top: 5%;
+    background-image: url("../assets/backgr1.jpg");
+    background-repeat: no-repeat;
+    &-title{
+        margin-bottom: 3rem;
+        padding: 3rem;
+        font-size: 2.5rem;
+        background: -webkit-gradient(left top, right top,$hoverBackgroundColor, $hoverGradientColor);
+        background: -webkit-linear-gradient(left,$hoverBackgroundColor, $hoverGradientColor);
+        background: -o-linear-gradient(left,$hoverBackgroundColor, $hoverGradientColor);
+        background: -ms-linear-gradient(left,$hoverBackgroundColor, $hoverGradientColor);
+        background: linear-gradient(to right,$hoverBackgroundColor, $hoverGradientColor);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$hoverBackgroundColor', endColorstr='$hoverGradientColor', GradientType=1 );
+        font-weight: bold;
+        color: $hoverFontColor;
+        -webkit-box-shadow: 1px 4px 13px 3px rgba(0,0,0,0.39);
+        -moz-box-shadow: 1px 4px 13px 3px rgba(0,0,0,0.39);
+        box-shadow: 1px 4px 13px 3px rgba(0,0,0,0.39);
+    }
     &-intro{
-        width:80%;
-        padding-top: 25%;
         padding-bottom: 4rem;
+        padding-left: 3rem;
+        color:$hoverTextBackColor;
+        font-weight: bold;
         &__title{
             padding-bottom: 2rem;
             font-size: 1.5rem;
@@ -14,6 +35,9 @@
     }
     &-bio{
         width:80%;
+        padding-left: 3rem;
+        color:$hoverTextBackColor;
+        font-weight: bold;
         &__title{
             padding-bottom: 2rem;
             font-size: 1.5rem;
@@ -22,4 +46,7 @@
 
         }
     }
+}
+.barred{
+    text-decoration: line-through;
 }

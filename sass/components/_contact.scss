@@ -1,0 +1,55 @@
+.contact{
+    margin-left: 15rem;
+    height: 100vh;
+    padding-top: 5%;
+    background-image: url("../assets/backgr3.jpg");
+    background-repeat: no-repeat;
+    &__title{
+        padding-left: 3rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        background: -webkit-gradient(left top, right top,$hoverBackgroundColor, $hoverGradientColor);
+        background: -webkit-linear-gradient(left,$hoverBackgroundColor, $hoverGradientColor);
+        background: -o-linear-gradient(left,$hoverBackgroundColor, $hoverGradientColor);
+        background: -ms-linear-gradient(left,$hoverBackgroundColor, $hoverGradientColor);
+        background: linear-gradient(to right,$hoverBackgroundColor, $hoverGradientColor);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$hoverBackgroundColor', endColorstr='$hoverGradientColor', GradientType=1 );
+        font-weight: bold;
+        color: $hoverFontColor;
+        -webkit-box-shadow: 1px 4px 13px 3px rgba(0,0,0,0.39);
+        -moz-box-shadow: 1px 4px 13px 3px rgba(0,0,0,0.39);
+        box-shadow: 1px 4px 13px 3px rgba(0,0,0,0.39);
+    }
+    &__descript{
+        padding-left: 3rem;
+        margin-bottom: 1rem;
+    }
+    &-elem{
+        padding-left: 3rem;
+        display: inline-block;
+        margin: 2rem;
+        font-family: "Glyphs";
+        width: 1rem;
+        &__link{
+            background: -webkit-gradient(left top, right top,$hoverBackgroundColor, $hoverGradientColor);
+            background: -webkit-linear-gradient(left,$hoverBackgroundColor, $hoverGradientColor);
+            background: -o-linear-gradient(left,$hoverBackgroundColor, $hoverGradientColor);
+            background: -ms-linear-gradient(left,$hoverBackgroundColor, $hoverGradientColor);
+            background: linear-gradient(to right,$hoverBackgroundColor, $hoverGradientColor);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$hoverBackgroundColor', endColorstr='$hoverGradientColor', GradientType=1 );
+            color:$hoverFontColor;
+            width: 1rem;
+            padding: 1rem;
+            border-radius: 1rem;
+            -webkit-box-shadow: 1px 4px 13px 3px rgba(0,0,0,0.39);
+            -moz-box-shadow: 1px 4px 13px 3px rgba(0,0,0,0.39);
+            box-shadow: 1px 4px 13px 3px rgba(0,0,0,0.39);
+            &:hover,&:focus{
+                border-radius: 0;
+                transition: 1.5s;
+            }
+        }
+    }
+}
